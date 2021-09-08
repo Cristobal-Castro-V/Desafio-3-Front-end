@@ -1,0 +1,21 @@
+
+.card{
+    float:left;
+    margin: 20px 20px 10px;
+}
+
+.card img{
+    width: 150px;
+    margin: 0 auto;
+}
+
+#data-search{
+    margin: 0 auto;
+}
+
+.discount{
+    padding:3px;
+    background-color: brown;
+    display: inline-block;
+    color: #fff;
+}
