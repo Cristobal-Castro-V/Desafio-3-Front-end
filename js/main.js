@@ -3,7 +3,7 @@ $(document).ready(function(){
     var search = "";
     $("#btn-buscar").click(function(){
         search = $("#search").val();
-        $.get("http://localhost:8080/api/product?search=" + search,
+        $.get("http://localhost:8080/api/products?search=" + search,
         function(data, statusText, xhr){
             var status = xhr.status;
             if(status == 200){
@@ -22,7 +22,7 @@ $(document).ready(function(){
                     index++;
                 }
 
-                if(data.length <= 0){
+                if(status == 401){
                     $("#data-search").html("No se encontraron productos");
                 }
 
