@@ -22,9 +22,7 @@ $(document).ready(function(){
                     index++;
                 }
 
-                if(status == 401){
-                    $("#data-search").html("No se encontraron productos");
-                }
+
 
                 var discount = $(".discount").html();
                 if(discount.length <= 2){
@@ -36,7 +34,9 @@ $(document).ready(function(){
                 
 
             }
-        });// fin get
+        }).fail(function() {
+              $("#data-search").html("No se encontraron productos");
+            });// fin get
     })// fin evento click
 
    
